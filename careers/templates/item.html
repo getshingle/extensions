@@ -1,0 +1,20 @@
+<article>
+  <nav aria-label="Breadcrumb"><a href="{{LIST_URL}}">{{LIST_TITLE}}</a></nav>
+  <p class="status" data-status="{{ITEM_CLOSED}}">This position is closed</p>
+  <hgroup>
+    <h1>{{ITEM_TITLE}}</h1>
+    <p>{{ITEM_SUMMARY}}</p>
+  </hgroup>
+  <dl class="facts">
+    <div><dt>Location</dt><dd>{{ITEM_LOCATION}}</dd></div>
+    <div><dt>Type</dt><dd>{{ITEM_TYPE}}</dd></div>
+    <div><dt>Workplace</dt><dd>{{ITEM_WORKPLACE}}</dd></div>
+    <div><dt>Apply by</dt><dd>{{ITEM_DEADLINE_TEXT}}</dd></div>
+  </dl>
+{{ITEM_BODY}}
+  <footer class="actions">
+    <a class="btn primary" href="{{ITEM_APPLY_URL}}">Apply for this position</a>
+    <a class="btn" href="{{LIST_URL}}">All positions</a>
+  </footer>
+</article>
+{{ITEM_SCHEMA}}

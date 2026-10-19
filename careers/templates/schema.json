@@ -1,0 +1,12 @@
+{
+  "@context": "https://schema.org",
+  "@type": "JobPosting",
+  "validThrough": "{{JSON_DEADLINE}}",
+  "employmentType": "{{JSON_EMPLOYMENT}}",
+  "jobLocationType": "{{JSON_LOCATION_TYPE}}",
+  "jobLocation": { "@type": "Place", "address": { "@type": "PostalAddress", "addressLocality": "{{JSON_LOCATION}}" } },
+  "hiringOrganization": { "@type": "Organization", "name": "{{JSON_SITE_NAME}}", "sameAs": "{{JSON_SITE_URL}}", "logo": "{{JSON_SITE_URL}}/icon-512.png" },
+  "datePosted": "{{JSON_POSTED}}",
+  "description": "{{JSON_BODY}}",
+  "title": "{{JSON_TITLE}}"
+}

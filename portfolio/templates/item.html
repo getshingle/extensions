@@ -1,0 +1,24 @@
+<section class="case">
+  <nav aria-label="Breadcrumb"><a href="{{LIST_URL}}">{{LIST_TITLE}}</a></nav>
+  <hgroup>
+    <p>{{ITEM_CLIENT}}</p>
+    <h1>{{ITEM_TITLE}}</h1>
+    <p>{{ITEM_SUMMARY}}</p>
+  </hgroup>
+  <dl class="facts">
+    <div><dt>Client</dt><dd>{{ITEM_CLIENT}}</dd></div>
+    <div><dt>Year</dt><dd>{{ITEM_YEAR}}</dd></div>
+    <div><dt>Location</dt><dd>{{ITEM_LOCATION}}</dd></div>
+    <div><dt>Services</dt><dd>{{ITEM_SERVICES}}</dd></div>
+    <div><dt>Website</dt><dd><a href="{{ITEM_WEBSITE}}" rel="noopener">{{ITEM_WEBSITE_TEXT}}</a></dd></div>
+  </dl>
+  <figure><img src="{{ITEM_IMAGE}}" alt="{{ITEM_COVER_ALT}}" fetchpriority="high"></figure>
+</section>
+<article>
+{{ITEM_BODY}}
+  <footer class="actions">
+    <a class="btn" href="{{LIST_URL}}">All projects</a>
+    <a class="btn primary" href="{{BUTTON_URL}}">{{BUTTON_LABEL}}</a>
+  </footer>
+</article>
+{{ITEM_SCHEMA}}

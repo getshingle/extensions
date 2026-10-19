@@ -1,0 +1,55 @@
+/* SPDX-License-Identifier: MIT */
+/* Team: portrait cards on the team page, and a page per person. */
+@layer extensions {
+  .profile > figure:first-child { aspect-ratio: 4 / 5; }
+  .profile hgroup { margin-bottom: .75rem; }
+  .profile hgroup h2 { font-size: 1.1875rem; }
+  .profile hgroup p { margin-top: .25rem; color: var(--accent); font-size: .9375rem; line-height: 1.4; }
+  .profile > p { color: var(--muted); font-size: .9375rem; }
+  .profile .social { margin-top: auto; padding-top: .75rem; }
+
+  /* No photo: the person's initials. */
+  figure[data-initials]:not(:has(img)) {
+    display: grid;
+    place-items: center;
+    background: color-mix(in srgb, var(--accent) 12%, var(--surface));
+  }
+  figure[data-initials]:not(:has(img))::after {
+    content: attr(data-initials);
+    color: var(--accent);
+    font: 600 3.5rem/1 var(--font-heading);
+    font-stretch: var(--heading-stretch);
+  }
+
+  /* A person's page: the photo on the left, the text on the right. */
+  .person > div {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: clamp(2rem, 5vw, 4.5rem);
+    align-items: start;
+  }
+  .person figure {
+    position: sticky;
+    top: 6.5rem;
+    margin: 0;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    border-radius: var(--radius);
+  }
+  .person figure img { width: 100%; height: 100%; object-fit: cover; border-radius: 0; }
+  .person hgroup { margin-bottom: 1.75rem; }
+  .person hgroup p { color: var(--accent); }
+  .person > div > div { max-width: 40rem; }
+
+  .contact { display: grid; gap: .625rem; margin: 2rem 0 0; padding: 1.5rem 0 0; border-top: 1px solid var(--line); list-style: none; }
+  .contact li { display: flex; align-items: center; gap: .75rem; }
+  .contact .icon { color: var(--accent); }
+  .contact a { color: var(--ink); text-decoration: none; }
+  .contact a:hover { text-decoration: underline; }
+  .person .social { margin-top: 1.5rem; }
+
+  @media (max-width: 768px) {
+    .person > div { grid-template-columns: 1fr; }
+    .person figure { position: static; max-width: 22rem; }
+  }
+}

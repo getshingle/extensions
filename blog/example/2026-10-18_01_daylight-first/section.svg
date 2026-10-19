@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700">
+<title>Section showing how a roof overhang blocks summer sun and lets winter sun in</title>
+<rect width="1200" height="700" fill="#faf7f1"/>
+<path d="M80 600H1120" stroke="#1d1c1a" stroke-width="3"/>
+<path d="M300 600V300M720 600V430M720 330V300M260 300h560" stroke="#1d1c1a" stroke-width="14" fill="none"/>
+<path d="M720 430V600" stroke="#8a5a2c" stroke-width="4"/>
+<path d="M1060 90 820 300M1060 90 720 430" stroke="#b07d2a" stroke-width="2.5" stroke-dasharray="10 8" fill="none"/>
+<path d="M1110 380 720 330M1110 380 440 600" stroke="#8a5a2c" stroke-width="2.5" stroke-dasharray="10 8" fill="none"/>
+<path d="M720 330 720 600 440 600z" fill="#8a5a2c" opacity=".12"/>
+<circle cx="1060" cy="90" r="22" fill="#faf7f1" stroke="#b07d2a" stroke-width="3"/>
+<circle cx="1110" cy="380" r="22" fill="#faf7f1" stroke="#8a5a2c" stroke-width="3"/>
+<g font-family="system-ui, sans-serif" font-size="24" fill="#5b544a">
+<text x="1000" y="60">Summer sun</text><text x="1000" y="440">Winter sun</text><text x="830" y="285">Overhang</text>
+</g>
+</svg>

@@ -1,0 +1,20 @@
+<article>
+  <nav aria-label="Breadcrumb"><a href="{{LIST_URL}}">{{LIST_TITLE}}</a></nav>
+  <hgroup>
+    <h1>{{ITEM_TITLE}}</h1>
+    <p>{{ITEM_SUMMARY}}</p>
+  </hgroup>
+  <p class="meta">
+    {{ITEM_BYLINE}}
+    <time datetime="{{ITEM_DATE}}">{{ITEM_DATE_TEXT}}</time>
+    <span>{{ITEM_TAG}}</span>
+    <span>{{ITEM_READ_TIME}}</span>
+  </p>
+  <figure><img src="{{ITEM_IMAGE}}" alt="{{ITEM_COVER_ALT}}" fetchpriority="high"></figure>
+{{ITEM_BODY}}
+  <footer class="actions">
+    <a class="btn" href="{{LIST_URL}}">All posts</a>
+    <a class="btn primary" href="{{BUTTON_URL}}">{{BUTTON_LABEL}}</a>
+  </footer>
+</article>
+{{ITEM_SCHEMA}}

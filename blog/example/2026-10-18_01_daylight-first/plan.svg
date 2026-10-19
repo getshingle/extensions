@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+<title>Floor plan with the living room facing south</title>
+<rect width="1200" height="800" fill="#faf7f1"/>
+<path d="M300 580 900 580" stroke="#8a5a2c" stroke-width="2" stroke-dasharray="8 8"/>
+<path d="M600 760 300 600M600 760 900 600M600 760 600 600" stroke="#8a5a2c" stroke-width="2" opacity=".5"/>
+<circle cx="600" cy="760" r="18" fill="#faf7f1" stroke="#8a5a2c" stroke-width="3"/>
+<path d="M240 120h720v460H240z" fill="none" stroke="#1d1c1a" stroke-width="14"/>
+<path d="M560 120v200M560 400v180M240 300h200M680 300h280M760 300v-180" fill="none" stroke="#1d1c1a" stroke-width="8"/>
+<path d="M330 580h200M650 580h240" stroke="#faf7f1" stroke-width="16"/>
+<path d="M330 580h200M650 580h240" stroke="#8a5a2c" stroke-width="4"/>
+<path d="M600 440h300v130H600z" fill="#8a5a2c" opacity=".12"/>
+<g font-family="system-ui, sans-serif" font-size="24" fill="#5b544a">
+<text x="300" y="215">Kitchen</text><text x="620" y="215">Bath</text><text x="830" y="215">Bed</text>
+<text x="300" y="455">Dining</text><text x="700" y="415">Living</text><text x="580" y="725" text-anchor="end">South</text>
+</g>
+<g transform="translate(1080 140)"><circle r="34" fill="none" stroke="#1d1c1a" stroke-width="2"/><path d="M0-28 10 10 0 4-10 10z" fill="#1d1c1a"/><text y="66" font-family="system-ui, sans-serif" font-size="22" text-anchor="middle" fill="#1d1c1a">N</text></g>
+</svg>

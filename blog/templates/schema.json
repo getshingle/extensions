@@ -1,0 +1,11 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": "{{JSON_URL}}",
+  "image": "{{JSON_IMAGE}}",
+  "datePublished": "{{JSON_DATE}}",
+  "description": "{{JSON_SUMMARY}}",
+  "author": {{JSON_AUTHOR}},
+  "publisher": { "@type": "Organization", "name": "{{JSON_SITE_NAME}}", "url": "{{JSON_SITE_URL}}" },
+  "headline": "{{JSON_TITLE}}"
+}

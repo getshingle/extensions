@@ -1,0 +1,41 @@
+/* SPDX-License-Identifier: MIT */
+/* collection.css: shared styles for extensions that list entries (blog, news,
+   team, careers, portfolio). It comes with each of them. */
+@layer extensions {
+  /* A post or an entry's own page. */
+  main > article > hgroup:has(+ .meta) { margin-bottom: 1.25rem; }
+  main > article > .meta { margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--line); }
+  main > article > figure img { width: 100%; }
+  main > article > .actions { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--line); }
+  main > section + article { padding-top: 0; }
+  /* A picture at the top of a card fills its width. */
+  :is(.cols-2, .cols-3, .cols-4) > article > figure:first-child {
+    margin: -1.5rem -1.5rem 1.25rem;
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+    border-radius: calc(var(--radius) - 1px) calc(var(--radius) - 1px) 0 0;
+    background: var(--line);
+  }
+  :is(.cols-2, .cols-3, .cols-4) > article > figure:first-child img { width: 100%; height: 100%; object-fit: cover; border-radius: 0; }
+
+  /* Date, category and similar details. */
+  .meta { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; margin-bottom: .5rem; color: var(--muted); font-size: .9375rem; }
+
+  /* Key facts as a row: <dl class="facts"><div><dt>Client</dt><dd>…</dd></div>…</dl> */
+  .facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+    gap: 1rem 2rem;
+    margin: 0 0 2.5rem;
+    padding: 1.25rem 0;
+    border-block: 1px solid var(--line);
+  }
+  .facts dt { color: var(--muted); font-size: .875rem; }
+  .facts dd { margin: 0; font-weight: 600; }
+  nav[aria-label="Breadcrumb"] { margin-bottom: 1.5rem; font-size: .9375rem; }
+  nav[aria-label="Breadcrumb"] a { color: var(--muted); text-decoration: none; }
+  nav[aria-label="Breadcrumb"] a::before { content: "← "; }
+  nav[aria-label="Breadcrumb"] a:hover { color: var(--ink); }
+  .pager { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 3rem; color: var(--muted); font-size: .9375rem; }
+  .pager [rel="next"] { margin-left: auto; }
+}

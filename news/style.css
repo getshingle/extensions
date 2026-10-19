@@ -1,0 +1,20 @@
+/* SPDX-License-Identifier: MIT */
+/* News: announcements as a list of rows, date on the left. */
+@layer extensions {
+  .news > article {
+    position: relative;
+    display: grid;
+    grid-template-columns: 11rem minmax(0, 1fr);
+    gap: .25rem 2rem;
+    padding-block: 1.75rem;
+    border-top: 1px solid var(--line);
+  }
+  .news > article:last-child { border-bottom: 1px solid var(--line); }
+  .news time { color: var(--muted); font-size: .9375rem; padding-top: .2rem; }
+  .news h2 { margin-bottom: .375rem; font-size: 1.3125rem; }
+  .news p { margin: 0; color: var(--muted); max-width: 46rem; }
+  .news > article:has(h2 a:hover) h2 a { text-decoration: underline; text-decoration-thickness: 1px; }
+  @media (max-width: 640px) {
+    .news > article { grid-template-columns: 1fr; }
+  }
+}

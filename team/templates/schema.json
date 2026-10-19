@@ -1,0 +1,10 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "url": "{{JSON_URL}}",
+  "image": "{{JSON_IMAGE}}",
+  "jobTitle": "{{JSON_ROLE}}",
+  "sameAs": {{JSON_SAME_AS}},
+  "worksFor": { "@type": "Organization", "name": "{{JSON_SITE_NAME}}", "url": "{{JSON_SITE_URL}}" },
+  "name": "{{JSON_TITLE}}"
+}
