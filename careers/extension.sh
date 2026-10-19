@@ -6,6 +6,19 @@
 # Fields: location, type (Full-time, Part-time, Contract, Internship),
 # workplace (On-site, Hybrid, Remote), status (open or closed), posted and
 # deadline (2026-11-30), apply (an email address or a link; default: EMAIL).
+
+# Needs extensions/collection.sh and collection.css, the list code that blog,
+# news, team, careers and portfolio share. If they are missing, say where they go.
+if [[ ! -f extensions/collection.sh || ! -f extensions/collection.css ]]; then
+  echo "The careers extension needs two more files: collection.sh and collection.css." >&2
+  echo "They are in extension-careers.zip, next to the careers folder." >&2
+  echo "Put them straight into extensions/, next to the careers folder (not inside it):" >&2
+  echo "  extensions/collection.sh" >&2
+  echo "  extensions/collection.css" >&2
+  echo "Download: https://getshingle.github.io/downloads/extension-careers.zip" >&2
+  exit 1
+fi
+
 MENU_LINK="Careers"
 
 build() {

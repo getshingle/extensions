@@ -3,6 +3,19 @@
 # Blog: posts in content/blog/, newest first, 12 per page, with a feed.
 #   content/blog/2026-10-18_my-post/index.html + cover.jpg   a post with pictures
 #   content/blog/2026-10-18_my-post.html                     a post without
+
+# Needs extensions/collection.sh and collection.css, the list code that blog,
+# news, team, careers and portfolio share. If they are missing, say where they go.
+if [[ ! -f extensions/collection.sh || ! -f extensions/collection.css ]]; then
+  echo "The blog extension needs two more files: collection.sh and collection.css." >&2
+  echo "They are in extension-blog.zip, next to the blog folder." >&2
+  echo "Put them straight into extensions/, next to the blog folder (not inside it):" >&2
+  echo "  extensions/collection.sh" >&2
+  echo "  extensions/collection.css" >&2
+  echo "Download: https://getshingle.github.io/downloads/extension-blog.zip" >&2
+  exit 1
+fi
+
 MENU_LINK="Blog"
 
 build() {

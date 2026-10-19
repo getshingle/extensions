@@ -5,6 +5,19 @@
 #   content/team/004_james-okafor.html                  no photo: initials
 # Fields: phone, mobile, email, and any social network that has an icon in
 # assets/icons/ (linkedin, instagram, x, website …).
+
+# Needs extensions/collection.sh and collection.css, the list code that blog,
+# news, team, careers and portfolio share. If they are missing, say where they go.
+if [[ ! -f extensions/collection.sh || ! -f extensions/collection.css ]]; then
+  echo "The team extension needs two more files: collection.sh and collection.css." >&2
+  echo "They are in extension-team.zip, next to the team folder." >&2
+  echo "Put them straight into extensions/, next to the team folder (not inside it):" >&2
+  echo "  extensions/collection.sh" >&2
+  echo "  extensions/collection.css" >&2
+  echo "Download: https://getshingle.github.io/downloads/extension-team.zip" >&2
+  exit 1
+fi
+
 MENU_LINK="Team"
 
 build() {
