@@ -4,8 +4,8 @@
 #   content/news/2026-10-01_new-office/index.html + cover.jpg   with a picture
 #   content/news/2026-10-01_new-office.html                     without
 
-# Needs extensions/collection.sh and collection.css, the list code that blog,
-# news, team, careers and portfolio share. If they are missing, say where they go.
+# Needs extensions/collection.sh and collection.css, the list code that several
+# extensions share. If they are missing, say where they go.
 if [[ ! -f extensions/collection.sh || ! -f extensions/collection.css ]]; then
   echo "The news extension needs two more files: collection.sh and collection.css." >&2
   echo "They are in extension-news.zip, next to the news folder." >&2

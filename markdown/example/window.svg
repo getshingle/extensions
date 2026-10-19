@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="A tall window with low sun falling across the floor">
+  <rect width="1200" height="675" fill="#e9e4da"/>
+  <rect y="470" width="1200" height="205" fill="#d6cdbd"/>
+  <path d="M470 470 L770 470 L1010 675 L300 675 Z" fill="#f6e3b8" opacity=".9"/>
+  <rect x="470" y="90" width="300" height="380" fill="#f9f1dc" stroke="#2a2723" stroke-width="10"/>
+  <path d="M620 90 V470 M470 280 H770" stroke="#2a2723" stroke-width="6"/>
+  <path d="M300 675 L470 470 M1010 675 L770 470" stroke="#c9ba9f" stroke-width="3"/>
+  <circle cx="1040" cy="150" r="46" fill="#f2c46d"/>
+</svg>

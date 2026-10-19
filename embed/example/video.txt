@@ -1,0 +1,6 @@
+---
+title: Big Buck Bunny, a short film by the Blender Foundation
+# A YouTube or Vimeo link. Replace this example with a video of your own.
+link: https://www.youtube.com/watch?v=aqz-KE-bpKQ
+---
+An example video: Big Buck Bunny, © Blender Foundation, CC BY 3.0.

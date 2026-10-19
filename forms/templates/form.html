@@ -1,0 +1,7 @@
+<form class="form" action="{{FORM_ACTION}}" method="post" accept-charset="UTF-8"{{FORM_ATTRS}}>
+  <h2>{{FORM_TITLE}}</h2>
+{{FORM_FIELDS}}
+  <p class="trap" aria-hidden="true"><label>Leave this field empty <input type="text" name="{{FORM_HONEYPOT}}" tabindex="-1" autocomplete="off"></label></p>
+  <p><button class="btn primary" type="submit">{{FORM_BUTTON}}</button></p>
+  <p class="form-note" role="status"></p>
+</form>

@@ -51,6 +51,10 @@ apply: jobs@example.com
 
 To remove a position completely, delete its file.
 
+**In Markdown:** with the [markdown extension](../markdown/), a position can be
+written in Markdown instead of HTML. Name the file `.md` instead of `.html`
+(`index.md` in a folder); the header stays the same.
+
 ## The careers page
 
 `content/careers/_index.html`: `title`, `eyebrow`, `description`, and below

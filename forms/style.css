@@ -1,0 +1,28 @@
+/* SPDX-License-Identifier: MIT */
+/* Forms: labels above their fields, one field per row. */
+@layer extensions {
+  .form { display: grid; gap: 1.125rem; max-width: 40rem; }
+  .form > * { margin: 0; }
+  .form h2 { font-size: 1.5rem; }
+  .form label, .form legend { display: block; margin-bottom: .375rem; font-weight: 600; font-size: .9375rem; }
+  .form :is(input:not([type="checkbox"], [type="radio"]), select, textarea) {
+    width: 100%;
+    min-height: 2.75rem;
+    padding: .625rem .75rem;
+    border: 1px solid color-mix(in srgb, var(--ink) 22%, transparent);
+    border-radius: min(var(--radius), 10px);
+    background: var(--paper);
+    color: var(--ink);
+    font: inherit;
+  }
+  .form textarea { min-height: 8rem; resize: vertical; }
+  .form :is(input, select, textarea):focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--accent); }
+  .form fieldset { margin: 0; padding: 0; border: 0; }
+  .form fieldset label, .form .check label { display: flex; gap: .625rem; align-items: baseline; margin: .25rem 0; font-weight: 400; }
+  .form input:is([type="checkbox"], [type="radio"]) { width: 1.125rem; height: 1.125rem; margin: 0; flex: none; accent-color: var(--accent); translate: 0 .15em; }
+  .form .required { color: var(--accent); }
+  .form .trap { position: absolute; left: -100vw; width: 1px; height: 1px; overflow: hidden; }
+  .form-note:empty { display: none; }
+  .form-note { padding: .75rem 1rem; border-radius: min(var(--radius), 10px); background: var(--surface); border: 1px solid var(--line); }
+  main > section.tinted .form :is(input:not([type="checkbox"], [type="radio"]), select, textarea) { background: var(--surface); }
+}

@@ -1,0 +1,51 @@
+/* SPDX-License-Identifier: MIT */
+/* Menu: sections of dishes with prices, in two columns on wide screens. */
+@layer extensions {
+  .courses { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1rem; }
+  .courses a {
+    padding: .375rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--ink);
+    font-size: .9375rem;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  .courses a:hover { border-color: var(--ink); }
+
+  .course { padding-top: clamp(2rem, 4vw, 3rem); scroll-margin-top: 4.5rem; }
+  .course > h2 { margin-bottom: .25rem; }
+  .course > .note { color: var(--muted); }
+  .dishes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr));
+    gap: 0 clamp(2rem, 5vw, 4rem);
+    margin: 1.25rem 0 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--line);
+  }
+  .dishes li {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-content: start;
+    gap: .25rem 1.25rem;
+    padding-block: 1.125rem;
+    border-bottom: 1px solid var(--line);
+  }
+  .dishes h3 { margin: 0; font-size: 1.0625rem; line-height: 1.4; }
+  .dishes .price { margin: 0; font-weight: 600; white-space: nowrap; }
+  .dishes p:not(.price) { grid-column: 1 / -1; margin: 0; color: var(--muted); font-size: .9375rem; }
+  .tag {
+    display: inline-block;
+    margin-left: .25rem;
+    padding: .05rem .45rem;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--accent) 14%, transparent);
+    color: var(--accent);
+    font-size: .75rem;
+    font-weight: 600;
+    vertical-align: .15em;
+  }
+  .menu-page .legend { margin-top: 2.5rem; color: var(--muted); font-size: .9375rem; }
+}

@@ -1,0 +1,9 @@
+---
+title: Send us a message
+---
+Your name | text | required
+Email | email | required
+Phone | tel
+What is your project? | select | A new home, A renovation or extension, An interior, Something else
+Tell us about it | textarea | required
+I agree that you keep my message to answer it. | consent

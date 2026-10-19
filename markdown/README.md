@@ -19,6 +19,11 @@ Without the extension, Shingle only reads `.html` files and needs nothing.
 
 If cmark-gfm is missing, the build stops and tells you how to install it.
 
+The first build adds an example page, `content/markdown/index.md`, at
+`/markdown/`. It shows what you type and what you get for text, links, lists,
+pictures, tables and more. It is not in the menu; open it in `dist/markdown/`
+and delete the folder `content/markdown` when you no longer need it.
+
 ## Write in Markdown
 
 Any page or entry can be a `.md` file instead of `.html`, with the same
@@ -36,3 +41,16 @@ We are a small studio by the river.
 
 A picture alone on its line gets a caption from its title, in quotes.
 Tables, ~~strikethrough~~ and plain web addresses work too.
+
+## Where it works
+
+Everywhere a page or an entry can be: `content/about.md`,
+`content/blog/2026-10-18_my-post.md`, `content/team/001_anna-berg/index.md`,
+a question for the FAQ, a service, a plan, and the `_index.md` of an
+extension's page. The header between the `---` lines stays exactly as in an
+`.html` file.
+
+Values from `site.conf` such as `{{EMAIL}}` and `{{PHONE}}` work in Markdown
+too, and so does HTML for anything Markdown cannot do, such as a button:
+`<a class="btn primary" href="/contact/">Get in touch</a>`.
+

@@ -56,6 +56,10 @@ cover_alt: Low sun falling through a tall window across a wooden floor
 
 Pictures: about 1600 pixels wide is plenty; save photos as JPG.
 
+**In Markdown:** with the [markdown extension](../markdown/), a post can be
+written in Markdown instead of HTML. Name the file `.md` instead of `.html`
+(`index.md` in a folder); the header stays the same.
+
 ## The blog page
 
 `content/blog/_index.html` holds its `title`, `eyebrow` (the small line above

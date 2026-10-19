@@ -5,8 +5,8 @@
 #   content/portfolio/001_my-project/index.html + cover.jpg
 #   content/portfolio/002_small-project.html
 
-# Needs extensions/collection.sh and collection.css, the list code that blog,
-# news, team, careers and portfolio share. If they are missing, say where they go.
+# Needs extensions/collection.sh and collection.css, the list code that several
+# extensions share. If they are missing, say where they go.
 if [[ ! -f extensions/collection.sh || ! -f extensions/collection.css ]]; then
   echo "The portfolio extension needs two more files: collection.sh and collection.css." >&2
   echo "They are in extension-portfolio.zip, next to the portfolio folder." >&2

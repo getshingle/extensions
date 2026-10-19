@@ -43,6 +43,10 @@ cover_alt: What the picture shows
 | `date` | Only if it differs from the date in the name |
 | `draft` | `true` keeps it off the website; `bash build.sh preview` shows drafts |
 
+**In Markdown:** with the [markdown extension](../markdown/), a announcement can be
+written in Markdown instead of HTML. Name the file `.md` instead of `.html`
+(`index.md` in a folder); the header stays the same.
+
 ## The news page
 
 `content/news/_index.html`: `title`, `eyebrow`, `description`, optional text

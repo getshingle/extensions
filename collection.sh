@@ -1,8 +1,9 @@
 # shellcheck shell=bash disable=SC2034,SC2153,SC2154  # values come from page headers and site.conf
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # ==============================================================================
-# collection.sh: shared code for extensions that list entries, such as blog,
-# news, team, careers and portfolio. It comes with each of them.
+# collection.sh: shared code for extensions that list entries: blog, news,
+# team, careers, portfolio, services, testimonials, gallery and pricing. It
+# comes with each of them.
 #
 #   content/<name>/_index.html                 the list page and its settings
 #   content/<name>/<key>_<slug>.html           an entry
@@ -13,7 +14,9 @@
 #
 # An extension's build() sets LIST_* defaults and calls collection. Settings in
 # _index.html win: per_page, sort, pages, feed. An optional item_hook runs for
-# every entry before its templates are rendered.
+# every entry before its templates are rendered; $file is the entry's file.
+# Afterwards COLLECTION_CARDS holds every card, for values that pages can
+# show, such as {{SERVICES}}.
 # ==============================================================================
 
 [[ ${#MONTHS[@]} -eq 12 ]] || MONTHS=(January February March April May June July August September October November December)
@@ -44,6 +47,7 @@ field() {   # field <file> <key>: one header value from another file
 collection() {
   local src=content/$EXT entry base file p per pages total slugs=' '
   local items=() cards=() entries='' updated=''
+  COLLECTION_CARDS=()
   [[ -d $src ]] || return 0
 
   # The list page's header (_index.html) and its settings.
@@ -85,6 +89,8 @@ collection() {
       entries+="  <entry><title>$ITEM_TITLE</title><link href=\"$SITE_URL$ITEM_URL\"/><id>$SITE_URL$ITEM_URL</id><updated>${ITEM_DATE:-$TODAY}T00:00:00Z</updated><summary>$ITEM_SUMMARY</summary></entry>"$'\n'
     fi
   done
+
+  COLLECTION_CARDS=("${cards[@]}")
 
   # List pages: /<name>/, then /<name>/page/2/ … when per_page is set.
   total=${#cards[@]} per=${LIST_PER_PAGE:-0}

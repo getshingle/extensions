@@ -23,8 +23,9 @@ markdown() {
     -e 's~^<p><img src="([^"]*)" alt="([^"]*)" title="([^"]*)" /></p>$~<figure><img src="\1" alt="\2" loading="lazy"><figcaption>\3</figcaption></figure>~' \
     -e 's~^<p><img src="([^"]*)" alt="([^"]*)" /></p>$~<figure><img src="\1" alt="\2" loading="lazy"></figure>~' \
     -e 's~ />~>~g')
-  # A Markdown page (not a blog post) gets its title and description on top.
-  if [[ -n $PAGE_URL && -z $ITEM_SLUG ]]; then
+  # A page of its own (not a blog post or another extension's entry) gets
+  # its title and description on top. build_pages is the function that asked.
+  if [[ ${FUNCNAME[2]} == build_pages ]]; then
     PAGE_BODY=$REPLY
     template markdown page.html; render "$REPLY"
   fi

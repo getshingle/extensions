@@ -1,0 +1,8 @@
+/* SPDX-License-Identifier: MIT */
+/* Business: the table of opening hours. */
+@layer extensions {
+  .hours { max-width: 30rem; margin-bottom: .75rem; }
+  .hours th { padding-right: 2rem; font-weight: 500; }
+  .hours td { text-align: right; white-space: nowrap; }
+  .hours-note { color: var(--muted); font-size: .9375rem; }
+}

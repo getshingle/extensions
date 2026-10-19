@@ -1,0 +1,49 @@
+/* SPDX-License-Identifier: MIT */
+/* Pricing: plans side by side, one standing out, and a monthly/yearly switch. */
+@layer extensions {
+  .pricing { margin-bottom: 2rem; }
+  .plans { grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); align-items: stretch; }
+  .plans > article { gap: .25rem; }
+  .plans > article.featured { border: 2px solid var(--accent); }
+  .plans .badge {
+    align-self: flex-start;
+    margin: 0 0 .5rem;
+    padding: .2rem .75rem;
+    border-radius: 999px;
+    background: var(--accent);
+    color: var(--on-accent);
+    font-size: .8125rem;
+    font-weight: 600;
+  }
+  .plans h2 { margin-bottom: .25rem; }
+  .plans > article > p:not([class]) { color: var(--muted); }
+  .plans .price { margin: .5rem 0 1rem; font: var(--heading-weight) 2.25rem/1.1 var(--font-heading); font-stretch: var(--heading-stretch); letter-spacing: -.02em; }
+  .plans .price small { color: var(--muted); font: 400 .9375rem/1.4 var(--font-body); letter-spacing: 0; }
+  .plans .features { flex: 1; margin-bottom: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+  .plans .features ul { margin: 0; padding: 0; list-style: none; }
+  .plans .features li { position: relative; padding-left: 1.625rem; }
+  .plans .features li + li { margin-top: .5rem; }
+  .plans .features li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+  .plans .features > :last-child { margin-bottom: 0; }
+  .plans > article > p:last-child { margin: 0; }
+  .plans .btn { width: 100%; }
+
+  .pricing .yearly { display: none; }
+  .pricing:has(input[value="yearly"]:checked) .yearly { display: inline; }
+  .pricing:has(input[value="yearly"]:checked) .monthly { display: none; }
+  .billing {
+    display: inline-flex;
+    gap: .25rem;
+    margin: 0 0 2rem;
+    padding: .25rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+  }
+  .billing legend { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .billing label { padding: .4rem 1rem; border-radius: 999px; font-size: .9375rem; font-weight: 600; cursor: pointer; }
+  .billing label:has(:checked) { background: var(--ink); color: var(--paper); }
+  .billing label:has(:focus-visible) { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .billing input { position: absolute; opacity: 0; pointer-events: none; }
+  .pricing-text { max-width: 46rem; }
+  .pricing-text:not(:has(*)) { display: none; }
+}

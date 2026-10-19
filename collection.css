@@ -1,6 +1,7 @@
 /* SPDX-License-Identifier: MIT */
 /* collection.css: shared styles for extensions that list entries (blog, news,
-   team, careers, portfolio). It comes with each of them. */
+   team, careers, portfolio, services, testimonials, gallery, pricing). It
+   comes with each of them. */
 @layer extensions {
   /* A post or an entry's own page. */
   main > article > hgroup:has(+ .meta) { margin-bottom: 1.25rem; }

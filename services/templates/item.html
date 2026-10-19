@@ -1,0 +1,17 @@
+<section class="service">
+  <nav aria-label="Breadcrumb"><a href="{{LIST_URL}}">{{LIST_TITLE}}</a></nav>
+  <hgroup>
+    <h1>{{ITEM_TITLE}}</h1>
+    <p>{{ITEM_SUMMARY}}</p>
+  </hgroup>
+  <dl class="facts">{{ITEM_FACTS}}</dl>
+  <figure><img src="{{ITEM_IMAGE}}" alt="{{ITEM_COVER_ALT}}" fetchpriority="high"></figure>
+</section>
+<article>
+{{ITEM_BODY}}
+  <footer class="actions">
+    <a class="btn primary" href="{{ITEM_BOOK_URL}}"{{ITEM_BOOK_ATTRS}}>{{ITEM_BOOK_LABEL}}</a>
+    <a class="btn" href="{{LIST_URL}}">All services</a>
+  </footer>
+</article>
+{{ITEM_SCHEMA}}

@@ -50,6 +50,10 @@ addresses are hidden from spam bots.
 `whatsapp`, `website`: one for each icon in `assets/icons/`. To add a network,
 add its icon there, in the same format as the others.
 
+**In Markdown:** with the [markdown extension](../markdown/), a person can be
+written in Markdown instead of HTML. Name the file `.md` instead of `.html`
+(`index.md` in a folder); the header stays the same.
+
 ## The team page
 
 `content/team/_index.html`: `title`, `eyebrow`, `description`, optional text,

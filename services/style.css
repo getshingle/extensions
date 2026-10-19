@@ -1,0 +1,10 @@
+/* SPDX-License-Identifier: MIT */
+/* Services: cards with a price line, and a page per service. */
+@layer extensions {
+  .services > article .meta { margin: auto 0 0; padding-top: .75rem; color: var(--ink); font-weight: 600; }
+  .services > article .meta span + span { color: var(--muted); font-weight: 400; }
+  .service hgroup { margin-bottom: 2rem; }
+  .service .facts { max-width: 46rem; }
+  .service > figure { margin: 0; }
+  .service > figure img { width: 100%; border: 1px solid var(--line); }
+}

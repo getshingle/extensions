@@ -46,6 +46,10 @@ cover_alt: What the cover picture shows
 
 Leave out any field you do not need; it disappears from the page.
 
+**In Markdown:** with the [markdown extension](../markdown/), a project can be
+written in Markdown instead of HTML. Name the file `.md` instead of `.html`
+(`index.md` in a folder); the header stays the same.
+
 ## The portfolio page
 
 `content/portfolio/_index.html`: `title`, `eyebrow`, `description`, optional

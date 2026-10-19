@@ -1,0 +1,10 @@
+---
+title: Cakes
+---
+Carrot cake | 4.80 | V
+With cream cheese frosting.
+
+Chocolate tart | 5.20 | V
+Dark chocolate and a pinch of sea salt.
+
+Lemon polenta cake | 4.80 | V, GF
