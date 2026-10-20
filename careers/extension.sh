@@ -33,9 +33,12 @@ item_hook() {
   if [[ $FM_status == closed ]]; then
     ITEM_CLOSED=closed ITEM_SCHEMA=''        # closed: no apply button, not in job search
   elif [[ $apply == *@* && $apply != *://* ]]; then
+    # An email address (with or without "mailto:"). The finished page holds it
+    # only in base64; build.sh does that for every mailto: link (hide_emails).
     subject="Application: $FM_title"
     subject=${subject//%/%25}; subject=${subject//&/%26}; subject=${subject// /%20}
-    ITEM_APPLY_URL="mailto:$apply?subject=$subject"
+    subject=${subject//\"/%22}; subject=${subject//[#]/%23}; subject=${subject//</%3C}; subject=${subject//>/%3E}
+    ITEM_APPLY_URL="mailto:${apply#mailto:}?subject=$subject"
   else
     html "$apply"; ITEM_APPLY_URL=$REPLY
   fi

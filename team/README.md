@@ -43,7 +43,8 @@ bluesky: https://bsky.app/…
 ```
 
 Leave out any field you do not need; it disappears from the page. Email
-addresses are hidden from spam bots.
+addresses are hidden from spam bots: the page holds them only in code, and
+they appear when it opens (with JavaScript).
 
 **Social links:** `linkedin`, `x`, `facebook`, `instagram`, `bluesky`,
 `threads`, `youtube`, `github`, `tiktok`, `mastodon`, `pinterest`, `behance`,

@@ -47,7 +47,7 @@ apply: jobs@example.com
 | `workplace` | On-site, Hybrid or Remote |
 | `status` | `open`, or `closed` to keep it listed as filled, without the apply button |
 | `posted`, `deadline` | Dates such as 2026-11-30 |
-| `apply` | An email address or a link to a form; without it, `EMAIL` from `site.conf` |
+| `apply` | An email address or a link to a form; without it, `EMAIL` from `site.conf`. An email address is hidden from spam bots, like every address on your website |
 
 To remove a position completely, delete its file.
 
