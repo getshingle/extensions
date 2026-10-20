@@ -1,7 +1,8 @@
 # Gallery extension
 
 Photo albums, each with its own page, and photos on the gallery page itself.
-A photo opens large over the page; the arrow keys go to the next one.
+A photo grows out of its small picture to fill the screen; the arrow keys go to the next one.
+On a device set to reduce motion, it opens at once, without moving.
 
 ## Install
 
