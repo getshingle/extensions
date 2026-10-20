@@ -1,7 +1,10 @@
 /* SPDX-License-Identifier: MIT */
 /* Team: portrait cards on the team page, and a page per person. */
 @layer extensions {
-  .profile > figure:first-child { aspect-ratio: 4 / 5; }
+  /* A portrait, as on the person's page, so one photo fits both. The second
+     selector wins over the 3 / 2 that collection.css gives pictures in cards. */
+  .profile > figure:first-child,
+  :is(.cols-2, .cols-3, .cols-4) > .profile > figure:first-child { aspect-ratio: 4 / 5; }
   .profile hgroup { margin-bottom: .75rem; }
   .profile hgroup h2 { font-size: 1.1875rem; }
   .profile hgroup p { margin-top: .25rem; color: var(--accent); font-size: .9375rem; line-height: 1.4; }
