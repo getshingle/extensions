@@ -8,7 +8,9 @@ finish() {
   {
     echo '<?xml version="1.0" encoding="UTF-8"?>'
     echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
-    for url in "${PAGES[@]}"; do echo "  <url><loc>$SITE_URL$url</loc></url>"; done
+    for url in "${PAGES[@]}"; do
+      [[ $NOINDEX == *" $url "* ]] || echo "  <url><loc>$SITE_URL$url</loc></url>"
+    done
     echo '</urlset>'
   } > dist/sitemap.xml
   [[ -f dist/robots.txt ]] || printf 'User-agent: *\nAllow: /\n\nSitemap: %s/sitemap.xml\n' "$SITE_URL" > dist/robots.txt

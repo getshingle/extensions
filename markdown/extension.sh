@@ -15,6 +15,7 @@ markdown() {
     echo "The markdown extension needs the program cmark-gfm. Install it:" >&2
     echo "  macOS:          brew install cmark-gfm" >&2
     echo "  Debian, Ubuntu: sudo apt install cmark-gfm" >&2
+    echo "  Arch Linux:     sudo pacman -S cmark-gfm" >&2
     echo "  Windows:        see extensions/markdown/README.md" >&2
     echo "Or write your pages in .html and remove extensions/markdown." >&2
     exit 1

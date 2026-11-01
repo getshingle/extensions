@@ -9,4 +9,5 @@ Google find every page.
 3. Run `bash build.sh`.
 
 To give search engines your own rules, put a `robots.txt` in `static/`; the
-extension then leaves it as it is.
+extension then leaves it as it is. A page with `robots: noindex` in its header
+stays out of `sitemap.xml`.

@@ -4,14 +4,16 @@ Write pages, blog posts and other entries in Markdown (`.md`) instead of HTML.
 Markdown is plain text with a few signs: `## Heading`, `**bold**`,
 `[a link](https://example.com)`, `- a list item`.
 
-This extension needs one extra program on your computer, **cmark-gfm**.
-Without the extension, Shingle only reads `.html` files and needs nothing.
+HTML stays the default: without this extension, Shingle reads `.html` files
+and needs nothing else. The extension is for those who would rather write
+Markdown, and it needs one extra program on your computer, **cmark-gfm**.
 
 ## Install
 
 1. Install cmark-gfm:
    - **macOS:** install [Homebrew](https://brew.sh), then run `brew install cmark-gfm`
    - **Debian, Ubuntu:** `sudo apt install cmark-gfm`
+   - **Arch Linux:** `sudo pacman -S cmark-gfm`
    - **Windows:** use WSL (Ubuntu inside Windows): install it from the
      Microsoft Store, then run `sudo apt install cmark-gfm` and build there
 2. Copy the `markdown` folder into the `extensions` folder of your website.
